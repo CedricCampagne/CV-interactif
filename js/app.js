@@ -1,26 +1,23 @@
 function ShowGrid(grid)
 {   
-    const divmain = document.querySelectorAll('.main_container_all');
-    
-    divmain.forEach(div =>{
-        div.style.display ="none";
-    })
-    
-    if(grid !== 'home'){
-        const description = document.querySelector('#description');
-        const nav = document.querySelector('.nav');
+  const divmain = document.querySelectorAll('.main_container_all');
+  
+  divmain.forEach(div =>{
+      div.style.display ="none";
+  })
+  
+  if(grid !== 'home'){
+    const description = document.querySelector('#description');
+    const nav = document.querySelector('.nav');
 
-        description.style.display='none';
-        nav.classList.add('open');
-        // nav.style.display='flex';
-    }else{
-        description.style.display='block';
-        nav.classList.remove('open');
-        // nav.style.display='none';
-    }
-
-    const gridToShow = document.getElementById(grid);
-    gridToShow.style.display = "grid";
+    description.style.display='none';
+    nav.classList.add('open');
+  }else{
+    description.style.display='block';
+    nav.classList.remove('open');
+  }
+  const gridToShow = document.getElementById(grid);
+  gridToShow.style.display = "grid";
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -33,11 +30,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
         target.classList.toggle('open');
         btn.classList.toggle('open');
 
-        // Si le contenu vient de s'ouvrir, on scroll dessus
         if(target.classList.contains('open')){
           target.scrollIntoView({
-            behavior: 'smooth',   // défilement fluide
-            block: 'center'        // aligne en haut de la fenêtre
+            behavior: 'smooth',
+            block: 'center'
           });
         }
       }

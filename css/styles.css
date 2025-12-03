@@ -5,13 +5,6 @@
     --hover-color : #2ECC71;
 }
 
-/* [data-theme="dark"] {
-  --text-main-color : #1f1f1f;
-    --bg-color : #fff;
-    --link-color : #3498DB;
-    --hover-color : #2ECC71;
-} */
-
 *{
     box-sizing: border-box;
 }
@@ -123,8 +116,8 @@ header p, header a {
     display: flex;
     flex-direction: column;
 }
-/* main_container */
 
+/* main_container */
 .main_container_all{
     display: flex;
     flex-direction: column;
@@ -135,17 +128,17 @@ header p, header a {
 
 #home{
     display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 2rem; 
-    align-items: stretch; /* aligne tout en haut */
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
     padding-left: 3rem;
 }
 
 .left_col,
 .right_col {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem; /* espace entre les blocs */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 #home h3{
@@ -156,8 +149,8 @@ header p, header a {
 
 #home h4 {
     font-size: large;
-
 }
+
 #home strong{
     font-size: x-large;   
 }
@@ -165,9 +158,11 @@ header p, header a {
 #home p {
     margin: 0.5rem;
 }
+
 #home ul {
     padding-left: 1rem;
 }
+
 #home li {    
     list-style:circle;
     margin: 1rem;
@@ -194,42 +189,42 @@ header p, header a {
 }
 
 .toggle_btn {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 1rem 0;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 1rem 0;
 }
 
 .toggle_btn i {
-  transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .toggle_btn.open i {
-  transform: rotate(180deg);
-  color: var(--link-color);
+    transform: rotate(180deg);
+    color: var(--link-color);
 }
 .toggle_btn.open{
     color: var(--link-color);  
 }
 
 .table_container{
-    overflow-x: auto;   /* permet le scroll horizontal */
-    -webkit-overflow-scrolling: touch; /* fluide sur mobile */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 #exp_table {
-  min-width: 800px;
-  border-collapse: collapse;
-  background-color: var(--bg-color);
-  color: var(--text-main-color);
-  border-radius: 8px;
-  overflow: hidden;
-  margin-top: 1rem;
+    min-width: 800px;
+    border-collapse: collapse;
+    background-color: var(--bg-color);
+    color: var(--text-main-color);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 1rem;
 }
 
 #exp_table th {
@@ -252,37 +247,32 @@ header p, header a {
 selectione les lignes impaires du tableau et les cellules de ces lignes
 */
 #exp_table tr:nth-child(odd) td {
-  background-color: #f5faff;
+    background-color: #f5faff;
 }
 
 #exp_table ul {
-  padding-left: 1.2rem;
-  margin: 0;
+    padding-left: 1.2rem;
+    margin: 0;
 }
 
 #exp_table li {
-  margin-bottom: 0.4rem;
-  line-height: 1.3;
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
 }
 
 /* classe commune pour cacher le contenu de base*/
 .toggle_content {
-  display: none;
+    display: none;
 }
 
 /* afficher avec l'ajout de la classe open*/
 .toggle_content.open {
-  display: block;
+    display: block;
 }
 
 #exp_hard_skill, #exp_table, #exp_soft_skill, #skill, #dwwm, #mcdo, #soft_skill, #hard_skill{
     padding: 1rem;
 }
-
-/* #skill p, #dwwm p{
-    font-size: 1.3rem;
-    line-height: 1.3;
-} */
 
 #exp_hard_skill, #skill, #exp_soft_skill, #dwwm, #mcdo, #soft_skill, #hard_skill{
     font-size: 1.3rem;
@@ -299,29 +289,31 @@ selectione les lignes impaires du tableau et les cellules de ces lignes
     margin: 1rem 0;
 }
 
-
 #education, #soft_skill, #hard_skill{
     display: none;
 }
 
-/* 1200 1024 768 485 320 */
 @media (max-width : 1024px){
     img, .header_profile i{
         display: none;
     }
+
     .description, .header_profile {
         font-size:medium;
     }
+
     .header_profile{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .nav li{   
         margin: 1rem;
         font-size: 1rem;
         list-style: none;
     }
+
     #exp_table th, #exp_table td {
         font-size: 0.8rem;
         padding: 0.5rem;
@@ -334,32 +326,40 @@ selectione les lignes impaires du tableau et les cellules de ces lignes
         flex-direction: column;
         gap: 0.5rem;
     }
+
     .cv_header_link i{
         font-size: 1.5rem;
     }
+
     #home{
         grid-template-columns: 1fr;
     }
+
     .description {
         display: none;
     }
+
     .nav.open{
         display: flex;
         flex-direction: column;
         margin: auto;
     }
+
     .nav li{   
         margin: 1rem;
         font-size: 0.8rem;
         list-style: none;
     }
+
     #exp_table th, #exp_table td {
         font-size: 0.6rem;
         padding: 0.3rem;
     }
+
     #exp_hard_skill, #skill, #exp_soft_skill, #dwwm, #mcdo, #soft_skill, #hard_skill{
         font-size: 1rem;
     }
+
     .toggle_btn{
         font-size: 1rem;
          margin: 1rem auto;
@@ -370,6 +370,7 @@ selectione les lignes impaires du tableau et les cellules de ces lignes
     h1{
         text-align: center;
     }
+
     .main_container_all{
         display: flex;
         flex-direction: column;
@@ -377,9 +378,11 @@ selectione les lignes impaires du tableau et les cellules de ces lignes
         margin: auto;
         padding: 1rem;
     }
+
     #exp_hard_skill, #skill, #exp_soft_skill, #dwwm, #mcdo, #soft_skill, #hard_skill{
         font-size: 0.8rem;
     }
+
     .toggle_btn{
         font-size: 0.8rem;
         margin: 1rem auto;
@@ -390,26 +393,33 @@ selectione les lignes impaires du tableau et les cellules de ces lignes
     h1{
         text-align: center;
     }
+
     #exp_table th, #exp_table td {
         font-size: 0.6rem;
         padding: 0.2rem;
     }
+
     #exp_hard_skill, #skill, #exp_soft_skill, #dwwm, #mcdo, #soft_skill, #hard_skill{
         font-size: 0.6rem;
     }
+
     .toggle_btn{
         font-size: 0.8rem;
     }
+
     .cv_header_list{
         text-align: center;
         font-size: medium;
     }
+
      .description, .header_profile {
         font-size:small;
     }
+
     #home h3{
         font-size: x-large;
     }
+    
     #home strong{
     font-size: large;   
 }
